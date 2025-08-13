@@ -16,12 +16,14 @@ function CardRight({ desserts }) {
           <h1>Your cart ({count})</h1>
           {desserts.map((dessert) => (
             <div key={dessert.id} className="cart-item">
-              <img src={dessert.image.thumbnail} alt={dessert.name} className="cardright__img" />
+              <img
+                src={dessert.image.thumbnail}
+                alt={dessert.name}
+                className="cardright__img"
+              />
               <div>
-                <p>
-                  {dessert.quantity} * {dessert.price}$
-                </p>
                 <span>{dessert.name}</span>
+                <br />
                 <span>{dessert.price * dessert.quantity}$</span>
               </div>
             </div>
