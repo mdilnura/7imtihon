@@ -10,14 +10,14 @@ function Card({ dessert, onAddToCart }) {
   const handleAddToCart = () => {
     dispatch(increment());
     setLocalCount(1);
-    onAddToCart(dessert);
+    onAddToCart({ ...dessert, quantity: 1 });
   };
 
   return (
     <div className="card">
       <img className="card__image" src={dessert.image.thumbnail} alt="" />
       {localCount === 0 ? (
-        <button onClick={handleAddToCart}>Add to cart</button>
+        <button className="card__btn" onClick={handleAddToCart}>Add to cart</button>
       ) : (
         <AddToCard localCount={localCount} setLocalCount={setLocalCount} />
       )}

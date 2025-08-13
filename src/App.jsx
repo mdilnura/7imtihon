@@ -4,12 +4,13 @@ import CardRight from "./component/CardRight";
 import { useState } from "react";
 
 function App() {
+  const [selectedItems, setSelectedItems] = useState([]);
   const { data, error, isPending } = useFetch(
     "https://json-api.uz/api/project/dessertss/desserts"
   );
-  const [selectedItems, setSelectedItems] = useState([]);
-  const handleAddToCart = (item) => {
-    setSelectedItems((prev) => [...prev, item]);
+  
+  const handleAddToCart = (item, localCount) => {
+    setSelectedItems((prev) => [...prev, {...item, quantity:localCount}]);
   };
   return (
     <div className="app">

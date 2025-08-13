@@ -1,0 +1,10 @@
+.addtocard__btn {
+  border: 2px solid;
+  border-color: brown;
+  padding: 4px 8px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.tocard {
+  margin-top: 10px;
+}

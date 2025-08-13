@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { increment, decrement } from "../app/features/counterSlice";
-
+import "./AddToCard.css";
 function AddToCard({ localCount, setLocalCount }) {
   const dispatch = useDispatch();
 
@@ -15,10 +15,14 @@ function AddToCard({ localCount, setLocalCount }) {
   };
 
   return (
-    <div>
-      <button onClick={handleDecrement}>-</button>
+    <div className="tocard">
+      <button className="addtocard__btn" onClick={handleDecrement}>
+        -
+      </button>
       <span>{localCount}</span>
-      <button onClick={handleIncrement}>+</button>
+      <button className="addtocard__btn" onClick={handleIncrement}>
+        +
+      </button>
     </div>
   );
 }
