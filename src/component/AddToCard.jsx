@@ -17,11 +17,11 @@ function AddToCard({ localCount, setLocalCount }) {
   return (
     <div className="tocard">
       <button className="addtocard__btn" onClick={handleDecrement}>
-        -
+        &#8722;
       </button>
       <span>{localCount}</span>
       <button className="addtocard__btn" onClick={handleIncrement}>
-        +
+        &#43;
       </button>
     </div>
   );

@@ -6,9 +6,12 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 12px;
-  align-items: center;  
+  align-items: center; 
+  border:1px solid black;
+  width: 350px; 
 }
 .cardright__img {
   margin-right: 10px;
   border-radius: 50%;
+  width: 100px;
 }

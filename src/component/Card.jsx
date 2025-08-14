@@ -15,7 +15,7 @@ function Card({ dessert, onAddToCart }) {
 
   return (
     <div className="card">
-      <img className="card__image" src={dessert.image.thumbnail} alt="" />
+      <img className="card__image" src={dessert.image.desktop} alt="" />
       {localCount === 0 ? (
         <button className="card__btn" onClick={handleAddToCart}>
           Add to cart
