@@ -1,17 +1,25 @@
+
+
+
+
+
 import { useDispatch } from "react-redux";
 import { increment, decrement } from "../app/features/counterSlice";
 import "./AddToCard.css";
-function AddToCard({ localCount, setLocalCount }) {
+
+function AddToCard({ localCount, setLocalCount, dessert }) {
   const dispatch = useDispatch();
 
   const handleIncrement = () => {
-    dispatch(increment());
+    dispatch(increment(dessert));
     setLocalCount(localCount + 1);
   };
 
   const handleDecrement = () => {
-    dispatch(decrement());
-    setLocalCount(localCount - 1);
+    if (localCount > 0) {
+      dispatch(decrement(dessert.id));
+      setLocalCount(localCount - 1);
+    }
   };
 
   return (
